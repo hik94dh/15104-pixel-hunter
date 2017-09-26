@@ -1,7 +1,7 @@
 # Личный проект «Пиксель хантер» [![Build status][travis-image]][travis-url]
 
 * Студент: [Никита Костенков](https://up.htmlacademy.ru/ecmascript/3/user/15104).
-* Наставник: `Неизвестно`.
+* Наставник: [Тимофей Маринин](https://github.com/marinintim).
 
 ---
 
