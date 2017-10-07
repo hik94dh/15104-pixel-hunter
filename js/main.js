@@ -5,24 +5,24 @@ const ARROW_LEFT = 37;
 const ARROW_RIGHT = 39;
 
 const showScreen = (index) => {
-  if (currentScreen >= 0 && currentScreen < templates.length) {
-    central.innerHTML = templates[index].innerHTML;
+  if (index < 0 || index > templates.length - 1) {
+    return;
   }
-  else {
-    console.log('counter');
-    pressKey(false)
-  }
+  central.innerHTML = templates[index].innerHTML;
+  currentScreen = index;
 };
 
 const pressKey = (e) => {
   if (e.altKey) {
     if (e.keyCode === ARROW_LEFT) {
-      showScreen(--currentScreen);
+      showScreen(currentScreen - 1);
     }
     else if (e.keyCode === ARROW_RIGHT) {
-      showScreen(++currentScreen);
+      showScreen(currentScreen + 1);
     }
   }
 };
 
-document.addEventListener(`keydown`, pressKey)
+document.addEventListener(`keydown`, pressKey);
+
+showScreen(currentScreen)
