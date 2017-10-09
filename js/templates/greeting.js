@@ -18,10 +18,12 @@ const greeting = element(`<div class="greeting central--blur">
 
 const greetingContinue = greeting.querySelector(`.greeting__continue`);
 
-const nextScreen = (evt) => {
+const nextScreen = () => {
   changeView(rules);
 };
 
-greetingContinue.addEventListener(`click`, nextScreen);
+greetingContinue.addEventListener(`click`, () => {
+  nextScreen()
+});
 
 export default greeting;

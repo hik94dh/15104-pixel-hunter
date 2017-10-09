@@ -53,7 +53,7 @@ const back = game2.querySelector(`.back`);
 
 game2Form.addEventListener(`click`, () => {
   const game2Input = game2.querySelectorAll(`input:checked`);
-  if (game2Input.length >= 0) {
+  if (game2Input.length > 0) {
     event.preventDefault();
     changeView(game3);
   }
