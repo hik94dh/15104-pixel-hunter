@@ -9,11 +9,9 @@ const intro = element(`<div class="central__content">
     </div>`);
 
 const introAsterisk = intro.querySelector(`.intro__asterisk`);
-const nextScreen = () => {
-  changeView(greeting);
-};
+
 introAsterisk.addEventListener(`click`, () => {
-    nextScreen()
+    changeView(greeting);
 });
 
 export default intro;
