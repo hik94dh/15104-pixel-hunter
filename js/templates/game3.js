@@ -50,10 +50,7 @@ const game3Form = game3.querySelector(`.game__content`);
 const back = game3.querySelector(`.back`);
 
 game3Form.addEventListener(`click`, () => {
-  const game3Option = game3.querySelectorAll(`.game__option`);
-  if (game3Option.length > 0) {
-    changeView(stats);
-  }
+  changeView(stats);
 });
 
 back.addEventListener(`click`, () => {
