@@ -33,16 +33,16 @@ const rulesForm = rules.querySelector(`.rules__form`);
 const rulesInput = rules.querySelector(`.rules__input`);
 const back = rules.querySelector(`.back`);
 
-const nextScreen = () => {
-  rulesInput.addEventListener('input', (e) => {
-    rulesSubmit.disabled = !e.target.value;
-  });
-  rulesForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    changeView(game1);
-  });
-};
-nextScreen();
+
+rulesInput.addEventListener('input', (e) => {
+  rulesSubmit.disabled = !e.target.value;
+});
+
+rulesForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  changeView(game1);
+});
+
 
 back.addEventListener(`click`, () => {
   changeView(greeting);

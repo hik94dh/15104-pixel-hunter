@@ -49,8 +49,10 @@ const game3 = element(`<header class="header">
 const game3Form = game3.querySelector(`.game__content`);
 const back = game3.querySelector(`.back`);
 
-game3Form.addEventListener(`click`, () => {
-  changeView(stats);
+game3Form.addEventListener(`click`, (e) => {
+  if (e.target.classList.contains('game__option')) {
+    changeView(stats);
+  }
 });
 
 back.addEventListener(`click`, () => {
