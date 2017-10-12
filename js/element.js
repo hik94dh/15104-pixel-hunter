@@ -1,7 +1,7 @@
 const element = (markup) => {
-  const element = document.createElement(`div`);
-  element.innerHTML = markup;
-  return element;
+  const screen = document.createElement(`div`);
+  screen.innerHTML = markup;
+  return screen;
 };
 
 export default element;

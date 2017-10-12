@@ -50,7 +50,7 @@ const game3Form = game3.querySelector(`.game__content`);
 const back = game3.querySelector(`.back`);
 
 game3Form.addEventListener(`click`, (e) => {
-  if (e.target.classList.contains('game__option')) {
+  if (e.target.classList.contains(`game__option`)) {
     changeView(stats);
   }
 });

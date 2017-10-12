@@ -34,11 +34,11 @@ const rulesInput = rules.querySelector(`.rules__input`);
 const back = rules.querySelector(`.back`);
 
 
-rulesInput.addEventListener('input', (e) => {
+rulesInput.addEventListener(`input`, (e) => {
   rulesSubmit.disabled = !e.target.value;
 });
 
-rulesForm.addEventListener('submit', (e) => {
+rulesForm.addEventListener(`submit`, (e) => {
   e.preventDefault();
   changeView(game1);
 });
