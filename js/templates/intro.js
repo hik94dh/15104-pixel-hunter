@@ -11,7 +11,7 @@ const intro = element(`<div class="central__content">
 const introAsterisk = intro.querySelector(`.intro__asterisk`);
 
 introAsterisk.addEventListener(`click`, () => {
-    changeView(greeting);
+  changeView(greeting);
 });
 
 export default intro;
