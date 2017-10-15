@@ -2,16 +2,19 @@ import assert from 'assert';
 import getTimer from './timer';
 
 describe(`Timer`, () => {
-  it(`Проверяем работу таймера`, () => {
+  it(`Таймер работает`, () => {
     const testTimer = getTimer(30);
     assert.equal(30, testTimer.currentTime());
   });
-  it(`Проверяем конец таймера`, () => {
+  it(`Таймер заканчивается`, () => {
     const testTimer = getTimer(0);
     assert.equal(`Время вышло`, testTimer.tick());
   });
-  it(`Проверяем уменьшение на 1 при обновлении таймера`, () => {
+  it(`При обновлении таймера время уменьшается на 1`, () => {
     const testTimer = getTimer(30);
-    assert.equal(29, testTimer.tick());
+    let i = 29;
+    while (i > 0) {
+      assert.equal(i--, testTimer.tick());
+    }
   });
 });

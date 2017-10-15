@@ -1,107 +1,125 @@
 import assert from 'assert';
 import countTotal from './score';
+import {timeType} from './game-config';
+
 
 const testScore = {
   lives: 0,
   answers: [
-    {correct: true, time: 11},
-    {correct: true, time: 11}
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL}
   ]
 };
 
 const testScore2 = {
   lives: 0,
   answers: [
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11}
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL}
   ]
 };
 
 const testScore3 = {
   lives: 3,
   answers: [
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11},
-    {correct: true, time: 11}
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL}
   ]
 };
 
 const testScore4 = {
   lives: 3,
   answers: [
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21}
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW}
   ]
 };
 
 const testScore5 = {
   lives: 0,
   answers: [
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21},
-    {correct: true, time: 21}
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW},
+    {correct: true, timeType: timeType.SLOW}
   ]
 };
 
 const testScore6 = {
   lives: 3,
   answers: [
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1}
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST}
   ]
 };
 
 const testScore7 = {
   lives: 0,
   answers: [
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1},
-    {correct: true, time: 1}
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST},
+    {correct: true, timeType: timeType.FAST}
+  ]
+};
+
+const testScore8 = {
+  lives: 1,
+  answers: [
+    {correct: false, timeType: timeType.NORMAL},
+    {correct: false, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL},
+    {correct: true, timeType: timeType.NORMAL}
   ]
 };
 
@@ -126,5 +144,8 @@ describe(`Score`, () => {
   });
   it(`Если всё верно + быстро и нет бонусов`, () => {
     assert.equal(1500, countTotal(testScore7));
+  });
+  it(`Если 2 ошибки и осталась 1 жизнь`, () => {
+    assert.equal(850, countTotal(testScore8));
   });
 });

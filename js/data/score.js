@@ -1,21 +1,14 @@
-const points = {
-  CORRECT: 100,
-  BONUS: 50,
-  FINE: -50,
-  ERROR: 0
-};
+import {timeType, points} from './game-config';
 
 const answerTotal = (answer) => {
-  const {time, correct} = answer;
-
-  if (!correct) {
+  if (!answer.correct) {
     return points.ERROR;
   } else {
-    if (time > 0 && time <= 10) {
+    if (answer.timeType === timeType.FAST) {
       return points.CORRECT + points.BONUS;
-    } else if (time > 10 && time <= 20) {
+    } else if (answer.timeType === timeType.NORMAL) {
       return points.CORRECT;
-    } else if (time > 20 && time <= 30) {
+    } else if (answer.timeType === timeType.SLOW) {
       return points.CORRECT + points.FINE;
     } else {
       return points.ERROR;
