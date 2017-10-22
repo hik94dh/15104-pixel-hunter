@@ -1,14 +1,11 @@
 import element from '../element';
 import changeView from '../changeView';
 import game3 from '../templates/game3';
+import headerBack from './components/headerBack';
 
-const stats = element(`<header class="header">
-    <div class="header__back">
-      <button class="back">
-        <img src="img/arrow_left.svg" width="45" height="45" alt="Back">
-        <img src="img/logo_small.svg" width="101" height="44">
-      </button>
-    </div>
+const stats = element(`
+  <header class="header">
+    ${headerBack()}
   </header>
   <div class="result">
     <h1>Победа!</h1>
